@@ -1,7 +1,7 @@
 <?php
 
-class HHWP_Test extends WP_UnitTestCase {
-
+class HHWP_Test extends WP_UnitTestCase
+{
 	/**
 	 * @test
 	 */

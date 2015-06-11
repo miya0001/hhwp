@@ -11,5 +11,5 @@ Domain Path: /languages
 */
 
 function is_hhvm() {
-	return preg_match( "/\-hhvm$/", phpversion() );
+	return (bool) preg_match( "/\-hhvm$/", phpversion() );
 }
