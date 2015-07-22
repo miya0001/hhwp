@@ -1,4 +1,4 @@
-<?php
+<?hh
 /*
 Plugin Name: HHWP
 Version: 0.1-alpha
@@ -10,15 +10,11 @@ Text Domain: hhwp
 Domain Path: /languages
 */
 
-class HHWP
+if ( is_hhvm() ) {
+	require_once( dirname( __FILE__ ) . '/lib/hhwp.php' );
+}
+
+function is_hhvm()
 {
-	public function __construct()
-	{
-
-	}
-
-	public static function is_hhvm()
-	{
-		return (bool) preg_match( "/\-hhvm$/", phpversion() );
-	}
+	return (bool) preg_match( "/\-hhvm$/", phpversion() );
 }

@@ -7,6 +7,6 @@ class HHWP_Test extends WP_UnitTestCase
 	 */
 	function is_hhvm()
 	{
-		$this->assertTrue( HHWP::is_hhvm() );
+		$this->assertTrue( is_hhvm() );
 	}
 }
