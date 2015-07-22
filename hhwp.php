@@ -10,6 +10,15 @@ Text Domain: hhwp
 Domain Path: /languages
 */
 
-function is_hhvm() {
-	return (bool) preg_match( "/\-hhvm$/", phpversion() );
+class HHWP
+{
+	public function __construct()
+	{
+
+	}
+
+	public static function is_hhvm()
+	{
+		return (bool) preg_match( "/\-hhvm$/", phpversion() );
+	}
 }
